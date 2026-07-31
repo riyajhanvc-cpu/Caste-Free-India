@@ -1,0 +1,1135 @@
+```html
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Caste Free India | जाति से नहीं, इंसानियत से पहचान</title>
+
+  <meta
+    name="description"
+    content="Caste Free India — समानता, सम्मान और इंसानियत के लिए एक जागरूकता मंच।"
+  />
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f7f8fa;
+      color: #17202a;
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    button {
+      cursor: pointer;
+      border: none;
+      font-family: inherit;
+    }
+
+    /* =========================
+       NAVBAR
+    ========================= */
+
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid #e5e7eb;
+    }
+
+    .navbar {
+      max-width: 1200px;
+      margin: auto;
+      padding: 15px 25px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 800;
+      font-size: 20px;
+    }
+
+    .logo-icon {
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      background: linear-gradient(
+        135deg,
+        #ff9933,
+        #ffffff,
+        #138808
+      );
+      display: grid;
+      place-items: center;
+      border: 2px solid #17202a;
+    }
+
+    .logo-icon span {
+      font-size: 18px;
+      font-weight: 900;
+    }
+
+    nav {
+      display: flex;
+      gap: 25px;
+      align-items: center;
+    }
+
+    nav a {
+      font-size: 14px;
+      font-weight: 600;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      color: #ff6b00;
+    }
+
+    .menu-btn {
+      display: none;
+      font-size: 25px;
+      background: transparent;
+    }
+
+    /* =========================
+       HERO
+    ========================= */
+
+    .hero {
+      min-height: 100vh;
+      padding: 150px 25px 80px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      background:
+        radial-gradient(circle at 20% 20%, rgba(255,153,51,0.12), transparent 30%),
+        radial-gradient(circle at 80% 70%, rgba(19,136,8,0.12), transparent 30%),
+        #ffffff;
+    }
+
+    .hero-content {
+      max-width: 850px;
+    }
+
+    .badge {
+      display: inline-block;
+      padding: 8px 16px;
+      border-radius: 50px;
+      background: #f1f5f9;
+      font-size: 13px;
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
+
+    .hero h1 {
+      font-size: clamp(45px, 8vw, 90px);
+      line-height: 1;
+      margin-bottom: 20px;
+      font-weight: 900;
+    }
+
+    .hero h1 span {
+      background: linear-gradient(
+        90deg,
+        #ff9933,
+        #e63946,
+        #138808
+      );
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .hero h2 {
+      font-size: clamp(20px, 4vw, 34px);
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      max-width: 700px;
+      margin: auto;
+      color: #64748b;
+      font-size: 17px;
+    }
+
+    .hero-buttons {
+      margin-top: 35px;
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      padding: 14px 24px;
+      border-radius: 12px;
+      font-weight: 700;
+      transition: 0.3s;
+      display: inline-block;
+    }
+
+    .btn-primary {
+      background: #17202a;
+      color: white;
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-3px);
+    }
+
+    .btn-secondary {
+      background: #ffffff;
+      border: 1px solid #d1d5db;
+    }
+
+    .btn-secondary:hover {
+      background: #f1f5f9;
+    }
+
+    /* =========================
+       GENERAL
+    ========================= */
+
+    section {
+      padding: 90px 25px;
+    }
+
+    .container {
+      max-width: 1150px;
+      margin: auto;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+
+    .section-title h2 {
+      font-size: 40px;
+      margin-bottom: 10px;
+    }
+
+    .section-title p {
+      color: #64748b;
+      max-width: 650px;
+      margin: auto;
+    }
+
+    /* =========================
+       AWARENESS
+    ========================= */
+
+    .awareness {
+      background: #ffffff;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 25px;
+    }
+
+    .card {
+      background: #f8fafc;
+      padding: 30px;
+      border-radius: 20px;
+      border: 1px solid #e5e7eb;
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+    }
+
+    .card-icon {
+      font-size: 35px;
+      margin-bottom: 15px;
+    }
+
+    .card h3 {
+      margin-bottom: 10px;
+    }
+
+    .card p {
+      color: #64748b;
+    }
+
+    /* =========================
+       QUOTE
+    ========================= */
+
+    .quote-section {
+      background: #17202a;
+      color: white;
+      text-align: center;
+    }
+
+    .quote {
+      max-width: 850px;
+      margin: auto;
+    }
+
+    .quote h2 {
+      font-size: clamp(30px, 5vw, 55px);
+      line-height: 1.2;
+    }
+
+    .quote p {
+      margin-top: 20px;
+      color: #cbd5e1;
+    }
+
+    /* =========================
+       CAMPAIGNS
+    ========================= */
+
+    .campaign-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 25px;
+    }
+
+    .campaign {
+      padding: 35px;
+      border-radius: 20px;
+      background: white;
+      border: 1px solid #e5e7eb;
+    }
+
+    .campaign span {
+      font-weight: 800;
+      font-size: 24px;
+    }
+
+    .campaign h3 {
+      margin: 15px 0 10px;
+    }
+
+    .campaign p {
+      color: #64748b;
+    }
+
+    /* =========================
+       PLEDGE
+    ========================= */
+
+    .pledge {
+      background: #f1f5f9;
+    }
+
+    .pledge-box {
+      max-width: 800px;
+      margin: auto;
+      background: white;
+      padding: 45px;
+      border-radius: 25px;
+      text-align: center;
+      box-shadow: 0 15px 40px rgba(0,0,0,0.06);
+    }
+
+    .pledge-box h2 {
+      margin-bottom: 20px;
+    }
+
+    .pledge-box p {
+      color: #64748b;
+      margin-bottom: 25px;
+    }
+
+    .pledge-btn {
+      padding: 15px 25px;
+      background: #138808;
+      color: white;
+      border-radius: 10px;
+      font-weight: 700;
+    }
+
+    #pledgeMessage {
+      margin-top: 20px;
+      font-weight: 700;
+      display: none;
+    }
+
+    /* =========================
+       SHARE
+    ========================= */
+
+    .share-section {
+      background: white;
+      text-align: center;
+    }
+
+    .share-buttons {
+      margin-top: 30px;
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .share-btn {
+      padding: 12px 20px;
+      border-radius: 10px;
+      background: #f1f5f9;
+      font-weight: 700;
+    }
+
+    /* =========================
+       ABOUT
+    ========================= */
+
+    .about {
+      background: #f8fafc;
+    }
+
+    .about-content {
+      max-width: 850px;
+      margin: auto;
+      text-align: center;
+    }
+
+    .about-content p {
+      color: #64748b;
+      font-size: 17px;
+      margin-top: 15px;
+    }
+
+    /* =========================
+       CONTACT
+    ========================= */
+
+    .contact-box {
+      max-width: 700px;
+      margin: auto;
+    }
+
+    form {
+      display: grid;
+      gap: 15px;
+    }
+
+    input,
+    textarea {
+      width: 100%;
+      padding: 15px;
+      border-radius: 10px;
+      border: 1px solid #d1d5db;
+      font-family: inherit;
+      outline: none;
+    }
+
+    textarea {
+      min-height: 130px;
+      resize: vertical;
+    }
+
+    input:focus,
+    textarea:focus {
+      border-color: #ff9933;
+    }
+
+    .submit-btn {
+      padding: 15px;
+      background: #17202a;
+      color: white;
+      border-radius: 10px;
+      font-weight: 700;
+    }
+
+    /* =========================
+       FOOTER
+    ========================= */
+
+    footer {
+      background: #111827;
+      color: white;
+      padding: 50px 25px 25px;
+      text-align: center;
+    }
+
+    .footer-logo {
+      font-size: 25px;
+      font-weight: 900;
+    }
+
+    footer p {
+      color: #94a3b8;
+      margin-top: 10px;
+    }
+
+    .social-links {
+      margin: 25px 0;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .social-links a {
+      color: #cbd5e1;
+      font-weight: 600;
+    }
+
+    .copyright {
+      border-top: 1px solid #374151;
+      padding-top: 20px;
+      margin-top: 20px;
+      font-size: 13px;
+      color: #64748b;
+    }
+
+    /* =========================
+       RESPONSIVE
+    ========================= */
+
+    @media (max-width: 850px) {
+
+      nav {
+        position: absolute;
+        top: 72px;
+        left: 0;
+        width: 100%;
+        background: white;
+        flex-direction: column;
+        padding: 25px;
+        display: none;
+        border-bottom: 1px solid #e5e7eb;
+      }
+
+      nav.active {
+        display: flex;
+      }
+
+      .menu-btn {
+        display: block;
+      }
+
+      .cards {
+        grid-template-columns: 1fr;
+      }
+
+      .campaign-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        padding-top: 130px;
+      }
+    }
+
+    @media (max-width: 500px) {
+
+      section {
+        padding: 70px 18px;
+      }
+
+      .hero h1 {
+        font-size: 50px;
+      }
+
+      .pledge-box {
+        padding: 30px 20px;
+      }
+
+      .logo {
+        font-size: 16px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- =========================
+       NAVBAR
+  ========================= -->
+
+  <header>
+    <div class="navbar">
+
+      <a href="#home" class="logo">
+        <div class="logo-icon">
+          <span>CFI</span>
+        </div>
+
+        <span>Caste Free India</span>
+      </a>
+
+      <button class="menu-btn" id="menuBtn">
+        ☰
+      </button>
+
+      <nav id="navMenu">
+        <a href="#home">Home</a>
+        <a href="#awareness">Awareness</a>
+        <a href="#campaigns">Campaigns</a>
+        <a href="#pledge">Pledge</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+    </div>
+  </header>
+
+
+  <!-- =========================
+       HERO
+  ========================= -->
+
+  <section class="hero" id="home">
+
+    <div class="hero-content">
+
+      <div class="badge">
+        🇮🇳 Equality • Humanity • Unity
+      </div>
+
+      <h1>
+        <span>Caste Free India</span>
+      </h1>
+
+      <h2>
+        जाति से नहीं, इंसानियत से पहचान।
+      </h2>
+
+      <p>
+        एक सकारात्मक जागरूकता मंच,
+        जहाँ हम समानता, सम्मान और इंसानियत
+        के विचार को आगे बढ़ाने का प्रयास करते हैं।
+      </p>
+
+      <div class="hero-buttons">
+
+        <a href="#awareness" class="btn btn-primary">
+          जागरूकता शुरू करें
+        </a>
+
+        <a href="#pledge" class="btn btn-secondary">
+          Equality Pledge लें
+        </a>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       AWARENESS
+  ========================= -->
+
+  <section class="awareness" id="awareness">
+
+    <div class="container">
+
+      <div class="section-title">
+
+        <h2>जागरूकता की शुरुआत</h2>
+
+        <p>
+          समाज में सकारात्मक बदलाव की शुरुआत
+          सही जानकारी, सम्मान और सोच से होती है।
+        </p>
+
+      </div>
+
+
+      <div class="cards">
+
+        <div class="card">
+
+          <div class="card-icon">🤝</div>
+
+          <h3>समानता</h3>
+
+          <p>
+            हर व्यक्ति सम्मान और गरिमा का हकदार है।
+            किसी को जाति के आधार पर कमतर समझना
+            समाज को कमजोर करता है।
+          </p>
+
+        </div>
+
+
+        <div class="card">
+
+          <div class="card-icon">❤️</div>
+
+          <h3>इंसानियत</h3>
+
+          <p>
+            हमारी सबसे बड़ी पहचान इंसान होना है।
+            हमें एक-दूसरे को सम्मान और संवेदनशीलता
+            के साथ देखना चाहिए।
+          </p>
+
+        </div>
+
+
+        <div class="card">
+
+          <div class="card-icon">🕊️</div>
+
+          <h3>भेदभाव से परे</h3>
+
+          <p>
+            हमारा उद्देश्य किसी व्यक्ति या समुदाय
+            को निशाना बनाना नहीं, बल्कि भेदभाव
+            के खिलाफ सकारात्मक जागरूकता फैलाना है।
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       QUOTE
+  ========================= -->
+
+  <section class="quote-section">
+
+    <div class="quote">
+
+      <h2>
+        “पहले इंसान,
+        फिर बाकी पहचान।”
+      </h2>
+
+      <p>
+        एक ऐसा समाज बनाने की दिशा में कदम,
+        जहाँ सम्मान और समानता हर व्यक्ति के लिए हो।
+      </p>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       CAMPAIGNS
+  ========================= -->
+
+  <section id="campaigns">
+
+    <div class="container">
+
+      <div class="section-title">
+
+        <h2>हमारे अभियान</h2>
+
+        <p>
+          सकारात्मक संदेशों को लोगों तक पहुँचाएँ
+          और समानता की सोच को मजबूत करें।
+        </p>
+
+      </div>
+
+
+      <div class="campaign-grid">
+
+        <div class="campaign">
+
+          <span>01</span>
+
+          <h3>#CasteFreeIndia</h3>
+
+          <p>
+            जाति आधारित भेदभाव के खिलाफ
+            सकारात्मक जागरूकता फैलाने का अभियान।
+          </p>
+
+        </div>
+
+
+        <div class="campaign">
+
+          <span>02</span>
+
+          <h3>#HumanityFirst</h3>
+
+          <p>
+            हर व्यक्ति को उसकी इंसानियत,
+            सम्मान और गरिमा के साथ देखने का संदेश।
+          </p>
+
+        </div>
+
+
+        <div class="campaign">
+
+          <span>03</span>
+
+          <h3>#OneIndia</h3>
+
+          <p>
+            विविधता के बीच एकता और
+            आपसी सम्मान को बढ़ावा देने का प्रयास।
+          </p>
+
+        </div>
+
+
+        <div class="campaign">
+
+          <span>04</span>
+
+          <h3>#EqualityForAll</h3>
+
+          <p>
+            समान अवसर, सम्मान और
+            सकारात्मक सामाजिक सोच के लिए अभियान।
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       PLEDGE
+  ========================= -->
+
+  <section class="pledge" id="pledge">
+
+    <div class="pledge-box">
+
+      <h2>
+        🤝 Equality Pledge
+      </h2>
+
+      <p>
+        मैं संकल्प लेता/लेती हूँ कि मैं किसी व्यक्ति के साथ
+        जाति के आधार पर भेदभाव नहीं करूँगा/करूँगी।
+        मैं हर इंसान का सम्मान करूँगा/करूँगी
+        और समानता एवं इंसानियत के मूल्यों को आगे बढ़ाने
+        का प्रयास करूँगा/करूँगी।
+      </p>
+
+      <button class="pledge-btn" id="pledgeBtn">
+        मैं यह संकल्प लेता/लेती हूँ
+      </button>
+
+      <div id="pledgeMessage">
+        ❤️ धन्यवाद! आपका संकल्प दर्ज किया गया।
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       SHARE
+  ========================= -->
+
+  <section class="share-section">
+
+    <div class="container">
+
+      <div class="section-title">
+
+        <h2>संदेश साझा करें</h2>
+
+        <p>
+          अगर आपको यह संदेश सकारात्मक लगता है,
+          तो इसे अपने दोस्तों और परिवार के साथ साझा करें।
+        </p>
+
+      </div>
+
+      <div class="share-buttons">
+
+        <button class="share-btn" onclick="shareWebsite()">
+          📤 Share
+        </button>
+
+        <button class="share-btn" onclick="copyLink()">
+          🔗 Copy Link
+        </button>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       ABOUT
+  ========================= -->
+
+  <section class="about" id="about">
+
+    <div class="about-content">
+
+      <div class="section-title">
+
+        <h2>हमारे बारे में</h2>
+
+      </div>
+
+      <p>
+        Caste Free India एक जागरूकता पहल है,
+        जिसका उद्देश्य समानता, सम्मान और इंसानियत
+        के सकारात्मक संदेश को आगे बढ़ाना है।
+      </p>
+
+      <p>
+        हम मानते हैं कि सामाजिक बदलाव
+        बातचीत, शिक्षा, जागरूकता और सकारात्मक सोच
+        से मजबूत होता है।
+      </p>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       CONTACT
+  ========================= -->
+
+  <section id="contact">
+
+    <div class="container">
+
+      <div class="section-title">
+
+        <h2>हमसे जुड़ें</h2>
+
+        <p>
+          आपके विचार और सुझाव हमारे लिए महत्वपूर्ण हैं।
+        </p>
+
+      </div>
+
+
+      <div class="contact-box">
+
+        <form id="contactForm">
+
+          <input
+            type="text"
+            id="name"
+            placeholder="आपका नाम"
+            required
+          />
+
+          <input
+            type="email"
+            id="email"
+            placeholder="आपका Email"
+            required
+          />
+
+          <textarea
+            id="message"
+            placeholder="अपना संदेश लिखें..."
+            required
+          ></textarea>
+
+          <button class="submit-btn" type="submit">
+            संदेश भेजें
+          </button>
+
+        </form>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       FOOTER
+  ========================= -->
+
+  <footer>
+
+    <div class="footer-logo">
+      🇮🇳 Caste Free India
+    </div>
+
+    <p>
+      जाति से नहीं, इंसानियत से पहचान।
+    </p>
+
+    <div class="social-links">
+
+      <a href="#" target="_blank">
+        Instagram
+      </a>
+
+      <a href="#" target="_blank">
+        YouTube
+      </a>
+
+      <a href="#" target="_blank">
+        Facebook
+      </a>
+
+    </div>
+
+    <div class="copyright">
+
+      © 2026 Caste Free India.
+      Built for Equality, Humanity & Unity.
+
+    </div>
+
+  </footer>
+
+
+  <!-- =========================
+       JAVASCRIPT
+  ========================= -->
+
+  <script>
+
+    // Mobile Menu
+
+    const menuBtn = document.getElementById("menuBtn");
+    const navMenu = document.getElementById("navMenu");
+
+    menuBtn.addEventListener("click", () => {
+      navMenu.classList.toggle("active");
+    });
+
+
+    // Close Mobile Menu
+
+    document.querySelectorAll("nav a").forEach(link => {
+
+      link.addEventListener("click", () => {
+
+        navMenu.classList.remove("active");
+
+      });
+
+    });
+
+
+    // Equality Pledge
+
+    const pledgeBtn = document.getElementById("pledgeBtn");
+    const pledgeMessage = document.getElementById("pledgeMessage");
+
+    pledgeBtn.addEventListener("click", () => {
+
+      pledgeMessage.style.display = "block";
+
+      pledgeBtn.innerText = "❤️ Pledge Accepted";
+
+      pledgeBtn.disabled = true;
+
+    });
+
+
+    // Share Website
+
+    function shareWebsite() {
+
+      if (navigator.share) {
+
+        navigator.share({
+
+          title: "Caste Free India",
+
+          text:
+            "जाति से नहीं, इंसानियत से पहचान। 🇮🇳",
+
+          url: window.location.href
+
+        });
+
+      } else {
+
+        alert(
+          "आपके ब्राउज़र में Share सुविधा उपलब्ध नहीं है।"
+        );
+
+      }
+
+    }
+
+
+    // Copy Website Link
+
+    function copyLink() {
+
+      navigator.clipboard.writeText(
+        window.location.href
+      );
+
+      alert(
+        "Website Link Copy हो गया!"
+      );
+
+    }
+
+
+    // Contact Form
+
+    const contactForm =
+      document.getElementById("contactForm");
+
+    contactForm.addEventListener(
+      "submit",
+      function(event) {
+
+        event.preventDefault();
+
+        const name =
+          document.getElementById("name").value;
+
+        alert(
+          "धन्यवाद " +
+          name +
+          "! आपका संदेश प्राप्त हुआ।"
+        );
+
+        contactForm.reset();
+
+      }
+    );
+
+  </script>
+
+</body>
+</html>
+```
